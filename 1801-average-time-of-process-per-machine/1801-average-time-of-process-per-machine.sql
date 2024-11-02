@@ -3,8 +3,8 @@ SELECT
     ROUND(AVG(end.timestamp - start.timestamp), 3) AS processing_time
 FROM 
     Activity start
-JOIN 
-    Activity end 
+CROSS JOIN 
+    Activity end
 ON 
     start.machine_id = end.machine_id 
     AND start.process_id = end.process_id 
