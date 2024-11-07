@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+SELECT DISTINCT(Project.project_id), ROUND(AVG(Employee.experience_years),2) AS average_years FROM Project Inner Join Employee on Project.employee_id = Employee.employee_id GROUP BY Project.Project_id;
